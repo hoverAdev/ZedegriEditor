@@ -2,13 +2,29 @@
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
-		<Nullable>enable</Nullable>
+		<Nullable>warnings</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ForceDesignerDPIUnaware>true</ForceDesignerDPIUnaware>
 		<ApplicationHighDpiMode>DpiUnawareGdiScaled</ApplicationHighDpiMode>
 		<ApplicationIcon>Zed_Icon_Windows.ico</ApplicationIcon>
-		<Title>ZedegrIEditor</Title>
+		<Title>Zedegri Editor</Title>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/hoverAdev/ZedegriEditor/</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>en-CA</NeutralLanguage>
+		<Copyright>(c) Ambience Town and Riamu Satou 2024-2025</Copyright>
+		<PackageProjectUrl>https://github.com/hoverAdev/ZedegriEditor/</PackageProjectUrl>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<SignAssembly>False</SignAssembly>
+		<ErrorReport>none</ErrorReport>
+		<Company>Ambience Town, Riamu Satou</Company>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Content Include="Zed_Icon_Windows.ico" />
@@ -35,6 +51,10 @@
 	  <None Update="Properties\Settings.settings">
 	    <Generator>SettingsSingleFileGenerator</Generator>
 	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
+	  <None Update="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
 	  </None>
 	</ItemGroup>
 </Project>
